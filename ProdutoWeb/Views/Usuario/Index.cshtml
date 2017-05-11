@@ -1,0 +1,58 @@
+﻿@model IEnumerable<ProdutoWeb.Models.Usuario>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/LayoutAdmin.cshtml";
+}
+
+<!-- Page Content -->
+<div class="container">
+    <!-- Heading Row -->
+    <div class="row">
+
+        <div class="col-md-12">
+            <h1>Usuários</h1>
+
+            <p class="toolbar">
+                @Html.ActionLink("Novo Usuário", "Inserir", new object { }, new { @class = "create btn btn-default" })
+
+                <br />
+                <span class="alert">@TempData["mensagem"]</span>
+            </p>
+            <table class="table table-striped" cellspacing="0" cellpadding="0">
+                <thead>
+                    <tr>
+                        <th data-field="name">Nome</th>
+                        <th data-field="stargazers_count">Sobrenome</th>
+                        <th data-field="forks_count">Email</th>
+                        <th data-field="forks_count">Situação</th>
+                        <th class="actions" width="220">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Nome</td>
+                            <td>@item.Sobrenome </td>
+                            <td>@item.Email</td>
+                            <td>@item.Situacao</td>
+                            <td class="actions">
+                                <a class="btn btn-success btn-xs" href="/Usuario/Consultar/@item.ID_USUARIO">Visualizar</a>
+                                @Html.ActionLink("Editar", "Editar", new { id = item.ID_USUARIO }, new { @class = "btn btn-warning btn-xs" })
+                                @Html.ActionLink("Excluir", "Excluir", new { id = item.ID_USUARIO }, new { @class = "btn btn-danger btn-xs" })
+
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+
+
+
+        </div>
+        <!-- /.col-md-4 -->
+    </div>
+    <!-- /.row -->

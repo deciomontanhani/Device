@@ -1,0 +1,75 @@
+﻿@model ProdutoWeb.Models.Noticia
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/LayoutAdmin.cshtml";
+}
+
+<div class="container">
+    <!-- Heading Row -->
+    <div class="row">
+
+        <div class="col-md-12">
+            <h1>Noticias</h1>
+
+
+            <div class="well">
+                <h3>Pesquisa Avançada</h3>
+
+                @using (Html.BeginForm("Pesquisa", "Noticia", FormMethod.Post, new { @class = "form-inline" }))
+                {
+                    <div class="form-group">
+                        <label class="control-label" for="nome">Título:</label>
+                        @Html.TextBoxFor(model => model.Titulo, new { @class = "form-control" })
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label" for="email">Notícia:</label>
+                        @Html.TextBoxFor(model => model.noticia, new { @class = "form-control" })
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary btn-lg">Filtrar</button>
+                }
+
+            </div>
+
+
+            @if ((ViewBag.ListaNoticiaPesquisados != null) && (ViewBag.ListaNoticiaPesquisados.Count > 0))
+            {
+                <table class="table table-striped" cellspacing="0" cellpadding="0">
+                    <thead>
+                        <tr>
+                            <th data-field="name">Nome</th>
+                            <th data-field="Descricao">eMail</th>
+                            <th class="actions" width="220">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in ViewBag.ListaNoticiaPesquisados)
+                        {
+                            <tr>
+                                <td>@item.Titulo</td>
+                                <td>@item.noticia</td>
+                                <td>@item.data_hora</td>
+                                <td class="actions">
+                                    <a class="btn btn-success btn-xs" href="\Noticia\Consultar\@item.NoticiaId">Visualizar</a>
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <p>Nenhuma notícia encontrada</p>
+            }
+
+
+
+
+
+        </div>
+        <!-- /.col-md-4 -->
+    </div>

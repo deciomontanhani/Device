@@ -1,0 +1,707 @@
+﻿@model ProdutoWeb.Models.ViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Formulário de Serviço Viky</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="@Url.Content("~/Content/css/bootstrap.min.css")" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="@Url.Content("~/Content/css/agency.css")" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="@Url.Content("~/Content/font-awesome/css/font-awesome.min.css")" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="page-top" class="index">
+    <!-- Navigation -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-85363389-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Projeto Arpa Viky</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">Serviços</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#projeto">Notícias</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">A Viky</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Clientes</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#investidores">Investidores </a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-heading"><br>Conheça a Viky:<br> sua assistente</div>
+                <a href="#services" class="page-scroll btn btn-xl">Fale-me Mais</a>
+            </div>
+        </div>
+    </header>
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Serviços</h2>
+                    <h3 class="section-subheading text-muted">Conheça as tarefas da sua nova assistente.</h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-home fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">VikiCASA</h4>
+                    <p class="text-muted">VikiCasa possui um sistema de controle da iluminação ambiente. Com uma pequena placa de Arduino instalada na sua casa, você economizará energia e terá total controle da sua residência.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-heart fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">VikiVIDA</h4>
+                    <p class="text-muted"> VikiVida possui um sistema de localização que te informa qual a melhor rota para o trabalho, te avisa de locais que deve evitar e ainda te passa a previsão do tempo para que possa se planejar.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">VIKINOTÍCIAS</h4>
+                    <p class="text-muted">VikiNoticías te atualiza com as principais informações da sua cidade e também do mundo. Acompanhe a bolsa e a cotação da moeda diariamente através do aplicativo. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Sessão do portfólio-->
+    <section id="projeto" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Notícias</h2>
+                    <h3 class="section-subheading text-muted"></h3>
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                @foreach (var item in Model.noticia)
+                {
+
+
+
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+
+                        <div class="portfolio-caption">
+                            <h4>@Html.DisplayFor(m => item.Titulo)</h4>
+
+                        </div>
+
+                        <a href="#portfolioModal-@Html.DisplayFor(m => item.NoticiaId)" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+
+                            <p>Clique aqui para saber mais</p>
+                        </a>
+
+                    </div>
+                }
+
+
+
+
+
+            </div>
+        </div>
+
+
+
+    </section>
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Sobre a Viky </h2>
+                    <h3 class="section-subheading text-muted">A assistente certa para o seu lar.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-image">
+								<span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fa fa-eye fa-stack-2x center "></i>
+                                </span>
+							</div>
+              <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                  <h4 class="subheading">A Viki cuida da sua casa</h4>
+
+
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">A assistente Viki te informa em tempo real todas as movimentações que estão ocorrendo na sua casa. Deixou o seu cão sozinho? 
+                                    Não esquenta, a Vicky está de olho pra você!</p>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                 <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fa fa-plane fa-stack-2x center "></i>
+                                </span>
+
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    
+                                    <h4 class="subheading">Vai viajar? Peça ajuda para sua assistente!</h4>
+
+
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted"> Se você está planejando aquela viagem bacana, a Viki pode te ajudar! A sua assistente vai te atualizar diariamente com boletins informativos para que você  acompanhe a cotação da moeda de seu destino. </p>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+
+                            <div class="timeline-image">
+                                 <span class="fa-stack fa-4x">
+                                 <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                                 <i class="fa fa-paperclip fa-stack-2x center "></i>
+                                </span>
+
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    
+                                    <h4 class="subheading">Não está esquecendo de nada?</h4>
+
+
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">"E aí, será que hoje vai chover?". "Levo ou não levo um casaco?".  Com a sua assistente do lar você não terá mais esse tipo de dúvida.</p>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fa fa-usd fa-stack-2x center "></i>
+                                </span>
+
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    
+                                    <h4 class="subheading">Economize com a ajuda da sua assistente </h4>
+
+
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Mais que uma assistente, uma verdadeira economia! Com a Viki, você controla a iluminação da sua casa. Controle a luz ambiente, ilumine corredores, apague para economizar. </p>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <h4>Contrate a
+                                    <br>Viki para <br>
+                                         sua casa!<br></h4>
+
+
+
+
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Área de contato -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Clientes</h2>
+                    <h3 class="section-subheading text-muted">Gostou da nossa assistente Viky?.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    
+                   
+                    
+                    @using (Html.BeginForm("CadastrarCliente", "Home"))
+                    {
+
+                        
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    @Html.TextBoxFor(model => model.cliente.Nome, new { placeholder = "Seu Nome *", @class = "form-control", id = "name" })
+                                    <!--<input type="text" class="form-control" placeholder="Seu nome *" id="name" required data-validation-required-message="Nome">-->
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+
+                                    @Html.TextBoxFor(model => model.cliente.Sobrenome, new { placeholder = "Seu Sobrenome *", @class = "form-control", id = "sobrenome" })
+                                    <!--<input type="text" class="form-control" placeholder="Seu sobrenome *" id="sobrenome" required data-validation-required-message="Sobrenome.">-->
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    @Html.TextBoxFor(model => model.cliente.Email, new { placeholder = "Seu Email *", @class = "form-control", id = "email" })
+                                    <!--<input type="email" class="form-control" placeholder="Seu Email *" id="email" required data-validation-required-message="Email-->
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    @Html.TextBoxFor(model => model.cliente.CPF, new { placeholder = "Seu CPF *", @class = "form-control", id = "CPF", maxLength = "15" })
+                                    <!--<input type="text" class="form-control" placeholder="Seu CPF *" id="CPF" required data-validation-required-message="Insira seu CPF">-->
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    @Html.TextBoxFor(model => model.cliente.Telefone, new { placeholder = "Insira seu telefone *", @class = "form-control", id = "phone", maxLength = "20" })
+                                    <!--<input type="tel" class="form-control" placeholder="Insira seu telefone *" id="phone" required data-validation-required-message="Por favor, insira o telefone.">-->
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="radio">
+
+                                    <label>@Html.RadioButtonFor(model => model.cliente.Genero, 2)Feminino</label>
+                                </div>
+                                <div class="radio">
+                                    <label>@Html.RadioButtonFor(model => model.cliente.Genero, 1, new { @checked = true })Masculino   </label>
+                                </div>
+                            </div>
+                            <div class="col-md-6"></div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+
+                                    @Html.DropDownListFor(model => model.estado, new SelectList(Model.estado, "EstadoId", "Nome", "Selecione.."), new { @class = "form-control", id = "cliente_Cidade_Estado_EstadoId" })
+
+
+                                    <!--Html.TextBoxFor(model => model.cliente.Cidade.Estado.Nome, new { placeholder = "Insira seu Estado *", class = "form-control", id = "estado" })
+                                    <input type="tel" class="form-control" placeholder="Estado *" id="phone" required data-validation-required-message="Por favor, insira seu telefone.">-->
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    
+                                   
+
+                                    @Html.DropDownListFor(model => model.cliente.CidadeId, new SelectList(Model.cidade, "CidadeId", "Nome", "Selecione.."), new { @class = "form-control", id = "cliente_CidadeId" })
+
+
+
+                                   
+                                    <!--Html.TextBoxFor(model => model.cliente.Cidade.Nome, new { placeholder = "Insira sua cidade *", class = "form-control", id = "cidade" })-->
+                                    <!--input type="tel" class="form-control" placeholder="Insira sua cidade *" id="cidade" required data-validation-required-message="Por favor, insira o telefone.">-->
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    @Html.TextAreaFor(model => model.cliente.Mensagem, new { placeholder = "Insira sua Mensagem *", @class = "form-control", id = "message", rows = "1" })
+                                    <!--<textarea class="form-control" rows="1" placeholder="Deixe uma mensagem " id="message" required data-validation-required-message="Deixe uma mensagem."></textarea>-->
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button id="btnEnviarMensagem" type="submit" class="btn btn-xl">Enviar Mensagem</button>
+                            </div>
+                        </div>
+                    }
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="investidores">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Investidores</h2>
+                    <h3 class="section-subheading text-muted">Gostou? Invista em nossa ideia.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+
+                    
+
+                    @using (Html.BeginForm("CadastrarInvestidor", "Home"))
+                    {
+
+                        
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                @if (!ViewData.ModelState.IsValid)
+                                {
+                                    @Html.ValidationSummary()
+                                }
+                                <div class="form-group">
+                                    @Html.TextBoxFor(model => model.investidor.Nome, new { placeholder = "Seu Nome *", @class = "form-control", id = "nome" })
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    @Html.TextBoxFor(model => model.investidor.Email, new { placeholder = "Seu Email *", @class = "form-control", id = "email" })
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    @Html.TextBoxFor(model => model.investidor.NomeEmpresa, new { placeholder = "Nome da sua Empresa *", @class = "form-control", id = "nomeEmpresa" })
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    @Html.TextBoxFor(model => model.investidor.CNPJ, new { placeholder = "CNPJ da sua Empresa *", @class = "form-control", id = "cnpj" , maxLength = "25"})
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    @Html.TextBoxFor(model => model.investidor.Telefone, new { placeholder = "Insira seu telefone *", @class = "form-control", id = "phone", maxLength = "30" })
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="radio">
+                                    <label>@Html.RadioButtonFor(model => model.investidor.Genero, 2, new { @checked = true }) Feminino</label>
+                                </div>
+                                <div class="radio">
+                                    <label>@Html.RadioButtonFor(model => model.investidor.Genero, 1) Masculino   </label>
+                                </div>
+                                <div class="radio">
+                                    <label>@Html.RadioButtonFor(model => model.investidor.Genero, 9) Não se aplica   </label>
+                                </div>
+                            </div>
+                            <div class="col-md-6"></div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+
+                                    @Html.DropDownListFor(model => model.estado, new SelectList(Model.estado, "EstadoId", "Nome", "Selecione.."), new { @class = "form-control", id = "investidor_Cidade_Estado_EstadoId" })
+                                    <!--input type="tel" class="form-control" placeholder="Insira sua cidade *" id="cidade" required data-validation-required-message="Por favor, insira o telefone.">-->
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    @Html.DropDownListFor(model => model.investidor.CidadeId, new SelectList(Model.cidade, "CidadeId", "Nome", "Selecione.."), new { @class = "form-control", id = "investidor_CidadeId" })
+
+
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    @Html.TextAreaFor(model => model.investidor.Mensagem, new { placeholder = "Insira sua Mensagem *", @class = "form-control", id = "message", rows = "1" })
+                                    <!--<textarea class="form-control" rows="1" placeholder="Deixe uma mensagem " id="message" required data-validation-required-message="Deixe uma mensagem."></textarea>-->
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button type="submit" class="btn btn-xl">Enviar Mensagem</button>
+                            </div>
+                        </div>
+                    }
+
+                    <!-- <form name="sentMessage" id="contactForm" novalidate>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Seu nome *" id="nome" required data-validation-required-message="Insira seu nome.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Seu Email *" id="email" required data-validation-required-message="Por favor, insira um email">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Nome da sua empresa *" id="empresa" required data-validation-required-message="Insira o nome da sua empresa.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="CNPJ da sua empresa *" id="CNPJ" required data-validation-required-message="Insira o CNPJ.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="Insira seu telefone *" id="phone" required data-validation-required-message="Por favor, insira o telefone.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="radio">
+                                    <label><input type="radio" name="optradio">Feminino</label>
+                                </div>
+                                <div class="radio">
+                                    <label><input type="radio" name="optradio">Masculino   </label>
+                                </div>
+                            </div>
+                            <div class="col-md-6"></div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="Insira sua cidade *" id="cidade" required data-validation-required-message="Por favor, insira o telefone.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="Estado *" id="phone" required data-validation-required-message="Por favor, insira seu telefone.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="1" placeholder="Deixe uma mensagem " id="message" required data-validation-required-message="Deixe uma mensagem."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button type="submit" class="btn btn-xl">Enviar Mensagem</button>
+                            </div>
+                        </div>
+                    </form> -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; Your Website 2016</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li>
+                            <a href="#">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Portfolio Modals -->
+    <!-- Use the modals below to showcase details about your portfolio projects! -->
+    @foreach (var item in Model.noticia)
+    {
+
+        <div class="portfolio-modal modal fade" id="portfolioModal-@Html.DisplayFor(m => item.NoticiaId)" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <h2>@Html.DisplayFor(m => item.Titulo)</h2>
+                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <p>@Html.DisplayFor(m => item.noticia)</p>
+                                <br />
+                                <p>Data de publicação: @Html.DisplayFor(m => item.data_hora)</p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Fechar Notícia</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+
+    <!-- jQuery -->
+    <script src="@Url.Content("~/scripts/jquery.js")"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="@Url.Content("~/scripts/bootstrap.min.js")"></script>
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="@Url.Content("~/scripts/classie.js")"></script>
+    <script src="@Url.Content("~/scripts/cbpAnimatedHeader.js")"></script>
+    <!-- Contact Form JavaScript -->
+    <script src="@Url.Content("~/scripts/jqBootstrapValidation.js")"></script>
+    <script src="@Url.Content("~/scripts/contact_me.js")"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="@Url.Content("~/scripts/agency.js")"></script>
+
+
+    <script>
+
+        $(document).ready(function () {
+
+            $("#cliente_Cidade_Estado_EstadoId").change(function () {
+
+                $("#cliente_CidadeId").empty();
+                var idEstado = $("#cliente_Cidade_Estado_EstadoId").val();
+                var url = "/Cidade/Index/?IdEstado=" + idEstado;
+
+                $.getJSON(url, function (data) {
+
+                    $.each(data, function (id, cidade) {
+                        $("#cliente_CidadeId").append(new Option(cidade.Nome, cidade.CidadeId));
+                    });
+
+                });
+
+            });
+
+
+
+            $("#investidor_Cidade_Estado_EstadoId").change(function () {
+
+                $("#investidor_CidadeId").empty();
+                var idEstado = $("#investidor_Cidade_Estado_EstadoId").val();
+                var url = "/Cidade/Index/?IdEstado=" + idEstado;
+
+                $.getJSON(url, function (data) {
+
+                    $.each(data, function (id, cidade) {
+                        $("#investidor_CidadeId").append(new Option(cidade.Nome, cidade.CidadeId));
+                    });
+
+                });
+
+            });
+
+
+
+            /*
+            $("#btnEnviarMensagem").click(function () {
+
+
+                $.post("/Contato/Gravar", $("#contactForm").serialize())
+                    .done(function (data) {
+
+                        $("#contact").html(data);
+
+                        alert('Efetuado com Sucesso');
+
+                    });
+
+            });
+            */
+
+        });
+
+    </script>
+
+
+</body>
+</html>

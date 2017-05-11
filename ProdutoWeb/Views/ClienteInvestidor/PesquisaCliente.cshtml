@@ -1,0 +1,113 @@
+﻿@model ProdutoWeb.Models.Cliente
+@{
+    ViewBag.Title = "Pesquisa";
+    Layout = "~/Views/LayoutAdmin.cshtml";
+}
+
+<div class="container">
+    <!-- Heading Row -->
+    <div class="row">
+
+        <div class="col-md-12">
+            <h1>Clientes</h1>
+
+
+            <div class="well">
+                <h3>Pesquisa Avançada</h3>
+
+                @using (Html.BeginForm("PesquisaCliente", "ClienteInvestidor"))
+                {
+
+
+
+                    <div class="row">
+                        <div class="col-md-6">
+
+                            <div class="form-group">
+                                @Html.TextBoxFor(model => model.Nome, new { placeholder = "Seu Nome *", @class = "form-control", id = "nome" })
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group">
+                                @Html.TextBoxFor(model => model.Email, new { placeholder = "Seu Email *", @class = "form-control", id = "email" })
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group">
+                                @Html.TextBoxFor(model => model.Sobrenome, new { placeholder = "Seu Sobrenome *", @class = "form-control", id = "nomeEmpresa" })
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group">
+                                @Html.TextBoxFor(model => model.CPF, new { placeholder = "CPF *", @class = "form-control", id = "cnpj" })
+                                <p class="help-block text-danger"></p>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.TextBoxFor(model => model.Cidade.Nome, new { placeholder = "Nome da Cidade *", @class = "form-control", id = "nomeCidade" })
+                                <p class="help-block text-danger"></p>
+                            </div>
+
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                @Html.TextBoxFor(model => model.Telefone, new { placeholder = "Insira seu telefone *", @class = "form-control", id = "phone" })
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6"></div>
+
+
+                        <div class="clearfix"></div>
+                        <div class="col-lg-12 text-center">
+                            <div id="success"></div>
+                            <button type="submit" class="btn btn-xl">Filtrar</button>
+                        </div>
+                    </div>
+                }
+
+            </div>
+
+
+            @if ((ViewBag.ListaClientePesquisados != null) && (ViewBag.ListaClientePesquisados.Count > 0))
+            {
+                <table class="table table-striped" cellspacing="0" cellpadding="0">
+                    <thead>
+                        <tr>
+                            <th data-field="name">Nome</th>
+                            <th data-field="Descricao">E-mail</th>
+                            <th data-field="Descricao">Sobrenome</th>
+                            <th data-field="Descricao">CPF</th>
+                            <th data-field="Descricao">Telefone</th>
+                            <th data-field="Descricao">Mensagem</th>
+                            <th data-field="Descricao">Cidade</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in ViewBag.ListaClientePesquisados)
+                        {
+                            <tr>
+                                <td>@item.Nome</td>
+                                <td>@item.Email</td>
+                                <td>@item.Sobrenome</td>
+                                <td>@item.CPF</td>
+                                <td>@item.Telefone</td>
+                                <td>@item.Mensagem</td>
+                                <td>@item.Cidade.Nome</td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <p>Nenhum Cliente encontrado</p>
+            }
+
+
+
+
+
+        </div>
+        <!-- /.col-md-4 -->
+    </div>

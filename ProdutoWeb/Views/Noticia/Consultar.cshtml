@@ -1,0 +1,40 @@
+﻿@model  ProdutoWeb.Models.Noticia
+
+
+@{
+    Layout = Layout = "~/Views/LayoutAdmin.cshtml";
+}
+
+
+    <!-- Page Content -->
+    <div class="container">
+        <!-- Call to Action Well -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="well">
+
+                    <h2>Notícia</h2>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Titulo, htmlAttributes: new { @class = "control-label" })
+                        @Html.DisplayFor(model => model.Titulo);
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label" for="mesnagem">Descrição:</label>
+                        @Html.DisplayFor(model => model.noticia)
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label" for="mesnagem">Data e Hora:</label>
+                        @Html.DisplayFor(model => model.data_hora)
+                    </div>
+                    <hr>
+
+                    @Html.ActionLink("Voltar", "Index", new object { }, new { @class = "btn btn-default btn-lg" })
+
+
+                </div>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>

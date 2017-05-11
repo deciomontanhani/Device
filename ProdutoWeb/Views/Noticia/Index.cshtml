@@ -1,0 +1,58 @@
+﻿@model IEnumerable<ProdutoWeb.Models.Noticia>
+
+@{
+    Layout = Layout = "~/Views/LayoutAdmin.cshtml";
+}
+
+
+
+    <!-- Page Content -->
+    <div class="container">
+        <!-- Heading Row -->
+        <div class="row">
+
+            <div class="col-md-12">
+                <h1>Notícias</h1>
+
+                <p class="toolbar">
+                    @Html.ActionLink("Nova Noticia", "Inserir", new object { }, new { @class = "create btn btn-default" })
+                    @Html.ActionLink("Pesquisa Avançada", "Pesquisa", new object { }, new { @class = "create btn btn-default" })
+
+                    <br />
+                    <span class="alert">@TempData["mensagem"]</span>
+                </p>
+                <table class="table table-striped" cellspacing="0" cellpadding="0">
+                    <thead>
+                        <tr>
+                            <th data-field="name">@Html.DisplayNameFor(model => model.Titulo)</th>
+                            <th data-field="stargazers_count">Noticia</th>
+                            <th data-field="forks_count">Data</th>
+                            <th class="actions" width="220">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Titulo</td>
+                                <td>@Html.DisplayFor(modelItem => item.noticia) </td>
+                                <td>@Html.DisplayFor(modelItem => item.data_hora)</td>
+                                <td class="actions">
+                                    <a class="btn btn-success btn-xs" href="/Noticia/Consultar/@item.NoticiaId">Visualizar</a>
+                                    @Html.ActionLink("Editar", "Editar", new { id = item.NoticiaId }, new { @class = "btn btn-warning btn-xs" })
+                                    @Html.ActionLink("Excluir", "Excluir", new { id = item.NoticiaId }, new { @class = "btn btn-danger btn-xs" })
+
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+
+
+
+            </div>
+            <!-- /.col-md-4 -->
+        </div>
+        <!-- /.row -->
